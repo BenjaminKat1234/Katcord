@@ -41,9 +41,12 @@ def get_response(message: str) -> str:
     if "!kat" in person_message:
         return "https://tenor.com/view/yippee-happy-yippee-creature-yippee-meme-yippee-gif-gif-1489386840712152603"
 
+    if "!rickroll" in person_message:
+        return "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
     if "!pedro" in person_message:
         return "[Pedro](https://www.youtube.com/watch?v=Pb-HDNUSqrE)"
-        
+
     if "!whopper" in person_message:
         return "https://tenor.com/view/whopper-burger-king-gif-27566515"
 
@@ -82,6 +85,9 @@ def get_response(message: str) -> str:
 
     if "!commands" in person_message:
         return "[Command list](https://668d400e6be3e36c7d2f3be1--startling-kashata-d2d426.netlify.app/)"
+
+    if "!" in person_message:
+        return "Unknown command. Try !commands."
 
 async def send_message(message, user_message, is_private):
     try:
