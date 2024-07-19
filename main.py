@@ -84,10 +84,9 @@ def get_response(message: str) -> str:
         return str(random.randint(1, 6))
 
     if "!commands" in person_message:
-        return "[Command list](https://668d400e6be3e36c7d2f3be1--startling-kashata-d2d426.netlify.app/)"
+        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper gif\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
 
-    if "!" in person_message:
-        return "Unknown command. Try !commands."
+
 
 async def send_message(message, user_message, is_private):
     try:
