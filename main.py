@@ -69,7 +69,7 @@ def get_response(message: str) -> str:
         return random.choice(rpsscissors)
 
     if "!add" in person_message:
-        return "[Add the bot to a server](https://discord.com/oauth2/authorize?client_id=1258066583717286010&permissions=274878037056&integration_type=0&scope=bot)"
+        return "[Add the bot to a server](https://discord.com/oauth2/authorize?client_id=1258066583717286010&permissions=274877971520&integration_type=0&scope=bot)"
 
     if "!lives" in person_message:
         return "Cats have 9 lives."
@@ -87,7 +87,7 @@ def get_response(message: str) -> str:
         return "[Github](https://github.com/BenjaminKat1234/Katcord) <:KatCord:1264055154139729960>"
 
     if "!commands" in person_message:
-        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper gif\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
+        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
 
 
 async def send_message(message, user_message, is_private):
