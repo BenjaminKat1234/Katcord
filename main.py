@@ -1,3 +1,5 @@
+# To learn how to host the bot yourself, go to Replit.md
+
 import discord
 import random
 import os
