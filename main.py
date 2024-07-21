@@ -4,7 +4,7 @@ import discord
 import random
 import os
 
-my_secret = os.environ['mydiscordtoken']
+my_secret = os.environ['katcordtoken']
 
 rpsrock = [
     "Bots choice: Rock **Tie**", "Bots choice: Paper **You lose**",
@@ -40,56 +40,57 @@ coin = ["Heads", "Tails"]
 def get_response(message: str) -> str:
     person_message = message.lower()
 
-    if "!kat" in person_message:
+
+    if "!kat" == person_message:
         return "https://tenor.com/view/yippee-happy-yippee-creature-yippee-meme-yippee-gif-gif-1489386840712152603"
 
-    if "!rickroll" in person_message:
+    if "!rickroll" == person_message:
         return "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
-    if "!pedro" in person_message:
+    if "!pedro" == person_message:
         return "[Pedro](https://www.youtube.com/watch?v=Pb-HDNUSqrE)"
 
-    if "!whopper" in person_message:
+    if "!whopper" == person_message:
         return "<:Whopper:1264047545156501587>"
 
-    if "!server" in person_message:
+    if "!server" == person_message:
         return "https://discord.gg/2FdrFw6XKU"
 
-    if "<@1258066583717286010>" in person_message:
+    if "<@1258066583717286010>" == person_message:
         return "Hi"
 
-    if "!meow" in person_message:
+    if "!meow" == person_message:
         return "Meow!"
 
-    if "!rps rock" in person_message:
+    if "!rps rock" == person_message:
         return random.choice(rpsrock)
 
-    if "!rps paper" in person_message:
+    if "!rps paper" == person_message:
         return random.choice(rpspaper)
 
-    if "!rps scissors" in person_message:
+    if "!rps scissors" == person_message:
         return random.choice(rpsscissors)
 
-    if "!add" in person_message:
+    if "!add" == person_message:
         return "[Add the bot to a server](https://discord.com/oauth2/authorize?client_id=1258066583717286010&permissions=274877971520&integration_type=0&scope=bot)"
 
-    if "!lives" in person_message:
+    if "!lives" == person_message:
         return "Cats have 9 lives."
 
-    if "!coin" in person_message:
+    if "!coin" == person_message:
         return str(random.choice(coin))
 
-    if "!joke" in person_message:
+    if "!joke" == person_message:
         return str(random.choice(jokes))
 
-    if "!dice" in person_message:
+    if "!dice" == person_message:
         return str(random.randint(1, 6))
 
-    if "!github" in person_message:
+    if "!github" == person_message:
         return "[Github](https://github.com/BenjaminKat1234/Katcord) <:Github:1264228835449241621>"
 
-    if "!commands" in person_message:
-        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
+    if "!commands" == person_message:
+        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!github - Sends a link to the katcord github\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
 
 
 async def send_message(message, user_message, is_private):
@@ -106,6 +107,7 @@ TOKEN = my_secret
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
+
 
 
 @client.event
