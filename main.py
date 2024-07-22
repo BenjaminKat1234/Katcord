@@ -49,9 +49,12 @@ def get_response(message: str) -> str:
 
     if "!pedro" == person_message:
         return "[Pedro](https://www.youtube.com/watch?v=Pb-HDNUSqrE)"
-
+        
     if "!whopper" == person_message:
         return "<:Whopper:1264047545156501587>"
+
+    if "!moyai" == person_message:
+        return "<:Moyai:1264931828742230036>"
 
     if "!server" == person_message:
         return "https://discord.gg/2FdrFw6XKU"
@@ -89,8 +92,11 @@ def get_response(message: str) -> str:
     if "!github" == person_message:
         return "[Github](https://github.com/BenjaminKat1234/Katcord) <:Github:1264228835449241621>"
 
+    if "!nerd" == person_message:
+        return "<:Nerd:1264681608330612766>"
+
     if "!commands" == person_message:
-        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!github - Sends a link to the katcord github\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!meow - Meow\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
+        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!github - Sends a link to the katcord github\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!moyai - moyai\n!meow - Meow\n!nerd - Erm.. actually\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
 
 
 async def send_message(message, user_message, is_private):
