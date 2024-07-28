@@ -60,7 +60,7 @@ def get_response(message: str) -> str:
         return "https://discord.gg/2FdrFw6XKU"
 
     if "<@1258066583717286010>" == person_message:
-        return "Hi"
+        return "<:KatCord:1264055154139729960>"
 
     if "!meow" == person_message:
         return "Meow!"
@@ -129,8 +129,6 @@ async def on_message(message):
     username = str(message.author)
     user_message = str(message.content)
     channel = str(message.channel)
-
-    print(f'{username} said: "{user_message}" ({channel})')
 
     if user_message[0] == '?':
         user_message = user_message[1:]
