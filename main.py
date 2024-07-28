@@ -1,5 +1,3 @@
-# To learn how to host the bot yourself, go to Replit.md
-
 import discord
 import random
 import os
@@ -59,9 +57,6 @@ def get_response(message: str) -> str:
     if "!server" == person_message:
         return "https://discord.gg/2FdrFw6XKU"
 
-    if "<@1258066583717286010>" == person_message:
-        return "<:KatCord:1264055154139729960>"
-
     if "!meow" == person_message:
         return "Meow!"
 
@@ -77,7 +72,7 @@ def get_response(message: str) -> str:
     if "!add" == person_message:
         return "[Add the bot to a server](https://discord.com/oauth2/authorize?client_id=1258066583717286010&permissions=274877971520&integration_type=0&scope=bot)"
 
-    if "!lives" == person_message:
+    if "!fact" == person_message:
         return "Cats have 9 lives."
 
     if "!coin" == person_message:
@@ -95,8 +90,11 @@ def get_response(message: str) -> str:
     if "!nerd" == person_message:
         return "<:Nerd:1264681608330612766>"
 
+    if "<@1258066583717286010>" == person_message:
+        return "<:KatCord:1264055154139729960>"
+
     if "!commands" == person_message:
-        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!github - Sends a link to the katcord github\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!moyai - moyai\n!meow - Meow\n!nerd - Erm.. actually\n!lives - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
+        return "```Commands:\n!add - Adds the bot to a server\n!dice - Rolls a dice\n!rps (Choice) - Play rock paper scissors\n!github - Sends a link to the katcord github\n!kat- Yippe\n!pedro - Pedro Pedro Pedro\n!moyai - moyai\n!meow - Meow\n!nerd - Erm.. actually\n!fact - Cats have 9 lives\n!whopper - Whopper Whopper\n!joke - Tells a joke\n!coin - Flips a coin\n!server - Sends a server invite link\n!commands - Shows a list of commands```"
 
 
 async def send_message(message, user_message, is_private):
